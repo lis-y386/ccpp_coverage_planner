@@ -1,0 +1,40 @@
+name: Bug report
+description: A reproducible correctness, build or demonstration problem
+title: "[Bug] "
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Standalone C++ core
+        - ROS adapter or service
+        - Browser replay
+        - Build, install or documentation
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and snapshot
+      description: OS, compiler, CMake, ROS if used, and exact snapshot/commit.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Exact command, small map/YAML, start and service request. Remove secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      render: text

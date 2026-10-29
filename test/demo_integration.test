@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find ccpp_coverage_planner)/launch/demo.launch">
+    <arg name="rviz" value="false"/>
+    <arg name="step_delay" value="0.0"/>
+    <arg name="timeout" value="60.0"/>
+  </include>
+  <test test-name="synthetic_coverage_completion" pkg="ccpp_coverage_planner"
+        type="test_demo_integration.py" time-limit="90.0"/>
+</launch>

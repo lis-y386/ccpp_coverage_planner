@@ -1,0 +1,23 @@
+{
+  "creator": "tools/render_assets.py",
+  "license": "BSD-3-Clause",
+  "source_data": {
+    "disconnected.json": "e8e8ed1caa2f2182656950d28fe8315a05fa987e096288aea57fa349be9e582e",
+    "maze.json": "096256560a62bfaed4df3ce7df4529959cc493dcd88d7fa0ddcf821751a58b03",
+    "obstacles.json": "7ace313095a5355b32334a710f23dafea2b6f73e8d4fac625a60776bdb3fe601",
+    "rectangle.json": "a1bf75f77b375c9a3edf0ab6ce3a28f77144e3bc1e7ce6f1f107d28f6e33529a",
+    "skip.json": "684d5e822a2febec011ad760de73722a1b03deef694b53d31d400219eb0912f2",
+    "stride.json": "fb1878e6a2fbda69bba16ecf4dfb7bc4887f065130b739a73b7d0d4b22823e5e"
+  },
+  "provenance": "Original artwork generated from actual C++ output on synthetic maps; system fonts are not bundled.",
+  "files": {
+    "architecture.svg": "92eab5d24383d5a19ffa4cf2ba88de87a1b4431f677a5ecbbbd2e3a14d1fd47c",
+    "banner.svg": "28fe50fd4617d765d5d65a89bcd408279d09ddddd2b3c67bd665cc63032f458e",
+    "demo.gif": "0ee7acdc474b1e6cb8117f33bc6d81a4a2717d0ffefb3b2d51a33a52942e62c3",
+    "scenes.svg": "ffb8601a557a77eee20efed868144bd949825f3fef104ed6849fcfcfaa1fc83c",
+    "badges/ci.svg": "69c1a4621efb3090702c4160892a0440d1f03acc12dfd8b10c704f67659f72c6",
+    "badges/cpp.svg": "f8b5f60281dc12917b5984ee91f2c4bd63e69abb1f49e0a407f8f13a17b31142",
+    "badges/license.svg": "366256f8785fe6da17a4e7dba9f57d492551ac7f38896f3ff689f5faccfa99c4",
+    "badges/ros.svg": "9330df674e63bb5084249badf456136b1f040fe36e26ce395534c716c4fd5cfb"
+  }
+}

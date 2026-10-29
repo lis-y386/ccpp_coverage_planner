@@ -1,0 +1,73 @@
+name: Build and verify
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+concurrency:
+  group: ccpp-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  native:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y libgtest-dev cppcheck
+      - run: python -m pip install -r requirements-dev.txt
+      - run: cmake -S . -B build -DCCPP_STANDALONE=ON -DCCPP_BUILD_UPSTREAM_TESTS=ON -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build --parallel 2
+      - run: ctest --test-dir build --output-on-failure
+      - run: python -m pytest -q --junitxml=docs/validation/current/python.xml
+      - run: python tools/verify_provenance.py
+      - run: python tools/check_project.py
+      - run: python tools/check_quality.py --format --static
+      - name: Install and consume standalone library
+        run: |
+          cmake --install build --prefix "$GITHUB_WORKSPACE/.maintenance/install"
+          cmake -S test/install_consumer -B build-consumer -DCMAKE_PREFIX_PATH="$GITHUB_WORKSPACE/.maintenance/install"
+          cmake --build build-consumer --parallel 2
+          ./build-consumer/consumer
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-test-evidence
+          path: |
+            build/Testing/Temporary/
+            docs/validation/current/
+
+  browser:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-evidence
+          path: docs/validation/current/
+
+  ros-noetic:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test legacy Noetic image on Linux host
+        run: |
+          set -euo pipefail
+          mkdir -p docs/validation/current
+          docker build --progress=plain --target tested -t ccpp-local-test . 2>&1 | tee docs/validation/current/docker.log
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: noetic-container-log
+          path: docs/validation/current/docker.log

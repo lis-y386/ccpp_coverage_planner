@@ -1,0 +1,21 @@
+name: Feature or algorithm proposal
+description: Describe a use case before implementation
+title: "[Proposal] "
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Problem and concrete use case
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed design, API impact and alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation plan
+      description: Maps, assertions and environments needed; do not invent performance evidence.

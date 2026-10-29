@@ -1,0 +1,3 @@
+@PACKAGE_INIT@
+include("${CMAKE_CURRENT_LIST_DIR}/ccpp_coverage_plannerTargets.cmake")
+check_required_components(ccpp_coverage_planner)

@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find ccpp_coverage_planner)/launch/ccpp_planner.launch"/>
+  <test test-name="service_contract" pkg="ccpp_coverage_planner"
+        type="test_service_contract.py" time-limit="45.0"/>
+</launch>

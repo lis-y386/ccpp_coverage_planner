@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/lis-y386/drone",
+  "branch": "ccpp_dev",
+  "commit": "8bc54d2bdb257b3f2f357b1709350e28d25f35cc",
+  "package_path": "src/ccpp_coverage_planner",
+  "hash_format": "SHA256 of canonical git blob bytes",
+  "files": {
+    "CMakeLists.txt": "4f95a13a36c6ce6a297e3c664eec25e7e9c8e105b3ba875012b2bdc5cc58e92a",
+    "README.md": "2f2040cf21e9fc7626a896bb4e6ae77b51ac08bf4951f333062665fc26849430",
+    "config/ccpp.yaml": "f3a3fec26f0e696d8da7494006f6b6fb4252845841c48e8c1d4f34264e472c19",
+    "include/ccpp_coverage_planner/grid_planner.h": "089f1241fad99d82fba6cdd2507e266f0339b0e06dc136a89900b8c1c3310465",
+    "launch/ccpp_planner.launch": "e57316ae6393cca6b859f1f65b7773cce881c41372a08e8918d6cd7c7487af2e",
+    "package.xml": "5e7de3ce13043530828eaaa8c38f5de5fafd8ee42e5cb1c57f4a07e0ac455feb",
+    "src/ccpp_planner_node.cpp": "f8089048bafe6c17ff2172068523c95eb405af19c482cd0a5747308908c64461",
+    "src/grid_planner.cpp": "a57cbecb0ff60c453c101bceb71bd34ec6210f4cf8385e0fb1cc26a4f5d90179",
+    "srv/PlanCoverage.srv": "445662181f60679f6a3a30c0988e2a20423bc503cc860f0277d9dc61a567fa73",
+    "test/test_grid_planner.cpp": "1e64a7a4c052fd0ff63d9d78e953eec54af5ba8de090e9b378a1db69b871cc5d"
+  }
+}

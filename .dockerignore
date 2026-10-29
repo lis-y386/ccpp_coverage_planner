@@ -1,0 +1,13 @@
+build*
+devel
+install
+logs
+.git
+__pycache__
+*.exe
+
+.maintenance
+.pytest_cache
+
+node_modules/
+.venv/

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(ccpp_install_consumer LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 14)
+find_package(ccpp_coverage_planner CONFIG REQUIRED)
+add_executable(consumer main.cpp)
+target_link_libraries(consumer PRIVATE ccpp::grid_planner)

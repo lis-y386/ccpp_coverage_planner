@@ -1,0 +1,60 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 248; 248; 245
+    Fixed Frame: map
+    Frame Rate: 30
+  Displays:
+    - Class: rviz/Map
+      Name: Occupancy
+      Enabled: true
+      Topic: /ccpp/occupancy_grid
+      Alpha: 0.75
+      Color Scheme: map
+    - Class: rviz/GridCells
+      Name: Confirmed targets
+      Enabled: true
+      Topic: /ccpp/visited_cells
+      Color: 20; 150; 120
+      Alpha: 0.9
+    - Class: rviz/GridCells
+      Name: Skip targets
+      Enabled: true
+      Topic: /ccpp/preset_skip_cells
+      Color: 235; 175; 65
+      Alpha: 0.7
+    - Class: rviz/GridCells
+      Name: Forbidden cells
+      Enabled: true
+      Topic: /ccpp/forbidden_cells
+      Color: 195; 70; 60
+      Alpha: 0.8
+    - Class: rviz/Path
+      Name: Current planned chunk
+      Enabled: true
+      Topic: /ccpp/path
+      Color: 30; 100; 220
+      Line Style: Lines
+      Line Width: 0.03
+    - Class: rviz/Path
+      Name: Ideal simulated arrivals
+      Enabled: true
+      Topic: /ccpp_demo/executed_path
+      Color: 15; 140; 140
+      Line Style: Lines
+      Line Width: 0.02
+  Views:
+    Current:
+      Class: rviz/TopDownOrtho
+      Name: Top view
+      Target Frame: map
+      Scale: 130
+      X: 2.5
+      Y: 2.0
+      Angle: 0
+Window Geometry:
+  Width: 1200
+  Height: 850

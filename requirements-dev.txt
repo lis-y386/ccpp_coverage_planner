@@ -1,0 +1,5 @@
+# Optional tooling; not needed to run the offline demo or C++ library.
+pytest==7.4.4
+PyYAML==6.0.2
+Pillow==10.4.0
+clang-format==18.1.8

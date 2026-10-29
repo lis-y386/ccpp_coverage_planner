@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the software snapshot and commit you actually used. This is an unreleased local preparation, not a paper."
+title: "ccpp_coverage_planner"
+type: software
+authors:
+  - name: "lis-y386"
+abstract: "A standalone C++14 and ROS1 package for column-wise coverage planning, A* connections and explicit arrival confirmation, extracted from drone commit 8bc54d2."
+license: BSD-3-Clause
+keywords:
+  - robotics
+  - coverage-path-planning
+  - ROS
+  - boustrophedon
+  - A-star

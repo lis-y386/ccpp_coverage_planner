@@ -1,0 +1,8 @@
+<launch>
+  <arg name="config" default="$(find ccpp_coverage_planner)/config/ccpp.yaml"/>
+
+  <node pkg="ccpp_coverage_planner" type="ccpp_planner_node"
+        name="ccpp_planner" output="screen">
+    <rosparam command="load" file="$(arg config)"/>
+  </node>
+</launch>

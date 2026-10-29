@@ -1,0 +1,13 @@
+{
+  "generator": "examples/standalone_demo.cpp calling unchanged upstream GridPlanner",
+  "upstream_commit": "8bc54d2bdb257b3f2f357b1709350e28d25f35cc",
+  "provenance": "synthetic maps; precomputed C++ output; ideal simulated arrivals",
+  "files": {
+    "disconnected.json": "e8e8ed1caa2f2182656950d28fe8315a05fa987e096288aea57fa349be9e582e",
+    "maze.json": "096256560a62bfaed4df3ce7df4529959cc493dcd88d7fa0ddcf821751a58b03",
+    "obstacles.json": "7ace313095a5355b32334a710f23dafea2b6f73e8d4fac625a60776bdb3fe601",
+    "rectangle.json": "a1bf75f77b375c9a3edf0ab6ce3a28f77144e3bc1e7ce6f1f107d28f6e33529a",
+    "skip.json": "684d5e822a2febec011ad760de73722a1b03deef694b53d31d400219eb0912f2",
+    "stride.json": "fb1878e6a2fbda69bba16ecf4dfb7bc4887f065130b739a73b7d0d4b22823e5e"
+  }
+}

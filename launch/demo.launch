@@ -1,0 +1,12 @@
+<launch>
+  <arg name="rviz" default="true"/>
+  <arg name="step_delay" default="0.04"/>
+  <arg name="timeout" default="120.0"/>
+  <include file="$(find ccpp_coverage_planner)/launch/ccpp_planner.launch"/>
+  <node pkg="ccpp_coverage_planner" type="demo_world.py" name="ccpp_demo_world" output="screen" required="true">
+    <param name="step_delay" value="$(arg step_delay)"/>
+    <param name="timeout" value="$(arg timeout)"/>
+  </node>
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="ccpp_demo_rviz"
+        args="-d $(find ccpp_coverage_planner)/rviz/demo.rviz"/>
+</launch>

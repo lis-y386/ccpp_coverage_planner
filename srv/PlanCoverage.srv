@@ -1,0 +1,12 @@
+# If true, ignore start and use the latest odometry position.
+bool use_current_pose
+geometry_msgs/Point start
+# 0=+X, 1=+Y, 2=-X, 3=-Y; any other value uses +X.
+int32 initial_heading
+---
+bool success
+bool finished
+string message
+nav_msgs/Path path
+# Aligned with path. 0=start/A* transit, 1=coverage target.
+uint8[] waypoint_types

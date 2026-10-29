@@ -1,0 +1,34 @@
+# Synthetic example only. World: 5 x 4 m; all coordinates use target_frame.
+target_frame: map
+cloud_topic: /ccpp_demo/obstacles
+odom_topic: /ccpp_demo/odom
+hull_xy: [0.0, 0.0, 5.0, 0.0, 5.0, 4.0, 0.0, 4.0]
+z_min: 0.5
+z_max: 1.5
+flight_altitude: 1.0
+resolution: 0.25
+# Additional inflation on top of existing input-cloud inflation.
+# The implementation rounds this up to a whole number of grid cells.
+inflation_radius: 0.25
+boundary_clearance: 0.125
+# Coverage lattice spacing = resolution * coverage_stride = 0.50 m.
+coverage_stride: 2
+chunk_cells: 8
+start_from_corner: true
+# Smaller than lattice spacing; exact demo acknowledgments visit one target.
+visited_radius: 0.10
+target_skip_radius: 0.50
+preset_skip_rectangles: [[1.0, 0.0, 1.5, 1.0]]
+preset_forbidden_rectangles: [[3.5, 2.5, 4.0, 3.0]]
+forbidden_clearance: 0.125
+# A fully observed synthetic world. A real adapter must match its map's actual
+# observation window. Missing obstacle returns alone do not prove free space.
+local_update_range_x: 6.0
+local_update_range_y: 6.0
+persistent_obstacles: true
+min_points_per_cell: 1
+tf_timeout: 0.10
+allow_latest_tf_fallback: false
+auto_replan: false
+# Reserved service input; upstream boustrophedon core currently ignores heading.
+default_initial_heading: 0

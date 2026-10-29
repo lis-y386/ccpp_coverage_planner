@@ -1,0 +1,15 @@
+{
+  "name": "ccpp-replay-devtools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Optional developer checks for the offline CCPP replay; not a runtime dependency",
+  "scripts": {
+    "test:browser": "node tools/test_browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
