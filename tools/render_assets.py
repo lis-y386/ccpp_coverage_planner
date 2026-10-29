@@ -31,7 +31,7 @@ def svg_map(scene, ox, oy, cell):
 
 def save_svg(name, width, height, body):
     text = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><g font-family="Arial, sans-serif">{body}</g></svg>\n'
-    (ASSETS / name).write_text(text, encoding="utf-8")
+    (ASSETS / name).write_bytes(text.encode("utf-8"))
 
 
 def font(size):

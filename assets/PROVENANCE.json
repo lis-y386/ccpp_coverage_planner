@@ -2,19 +2,19 @@
   "creator": "tools/render_assets.py",
   "license": "BSD-3-Clause",
   "source_data": {
-    "disconnected.json": "e8e8ed1caa2f2182656950d28fe8315a05fa987e096288aea57fa349be9e582e",
-    "maze.json": "096256560a62bfaed4df3ce7df4529959cc493dcd88d7fa0ddcf821751a58b03",
-    "obstacles.json": "7ace313095a5355b32334a710f23dafea2b6f73e8d4fac625a60776bdb3fe601",
-    "rectangle.json": "a1bf75f77b375c9a3edf0ab6ce3a28f77144e3bc1e7ce6f1f107d28f6e33529a",
-    "skip.json": "684d5e822a2febec011ad760de73722a1b03deef694b53d31d400219eb0912f2",
-    "stride.json": "fb1878e6a2fbda69bba16ecf4dfb7bc4887f065130b739a73b7d0d4b22823e5e"
+    "disconnected.json": "0f0966f87c097cd3bba425b06263da9351bed2e25f4c386a33d87587632e3542",
+    "maze.json": "0770d62fb0347187b6a830b182eddcfb0b1d76f40b951cb7e8ff14596fb37d6b",
+    "obstacles.json": "3b7ef894e8d2f4208a21ecd0cd3d33c512b1324be656340ff809a2ae0e3e0b51",
+    "rectangle.json": "ef69123718c26626cb378d03a0fa6919818a7274fbf95d8f0e9ac1ecf111948f",
+    "skip.json": "bd9d9a3e8e2417e5482ba9b39459625c8244e881f367d7591dcca80c4f3b227e",
+    "stride.json": "c8ce5d6256b5b112afc1d1ba15ba2f0971b9c8e8e40f52c4e506545a69d2dd0b"
   },
   "provenance": "Original artwork generated from actual C++ output on synthetic maps; system fonts are not bundled.",
   "files": {
-    "architecture.svg": "92eab5d24383d5a19ffa4cf2ba88de87a1b4431f677a5ecbbbd2e3a14d1fd47c",
-    "banner.svg": "28fe50fd4617d765d5d65a89bcd408279d09ddddd2b3c67bd665cc63032f458e",
+    "architecture.svg": "0de173ffeba8006fe85539fc71b1720092f56824e11b4d0f32762accf75f9058",
+    "banner.svg": "ce9b597c7c64fe955b8c32eafa49bf93868a55fe7d00e909a964f01bd664d65f",
     "demo.gif": "0ee7acdc474b1e6cb8117f33bc6d81a4a2717d0ffefb3b2d51a33a52942e62c3",
-    "scenes.svg": "ffb8601a557a77eee20efed868144bd949825f3fef104ed6849fcfcfaa1fc83c",
+    "scenes.svg": "9ede90e836aaeef7a768a907d38a6af094f76554a28f30488eee1b5923024aab",
     "badges/ci.svg": "69c1a4621efb3090702c4160892a0440d1f03acc12dfd8b10c704f67659f72c6",
     "badges/cpp.svg": "f8b5f60281dc12917b5984ee91f2c4bd63e69abb1f49e0a407f8f13a17b31142",
     "badges/license.svg": "366256f8785fe6da17a4e7dba9f57d492551ac7f38896f3ff689f5faccfa99c4",

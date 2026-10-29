@@ -1,0 +1,68 @@
+[
+  {
+    "command": [
+      "E:\\python-learning\\ccpp_coverage_planner\\build\\ccpp_demo.exe",
+      "--scenario",
+      "rectangle",
+      "--output",
+      "E:\\python-learning\\ccpp_coverage_planner\\.maintenance\\cloud-ci-20261029\\source\\docs\\data\\rectangle"
+    ],
+    "output": "rectangle: PASS; 320 confirmed targets, 40 chunks, 359 path points; synthetic arrivals only",
+    "returncode": 0
+  },
+  {
+    "command": [
+      "E:\\python-learning\\ccpp_coverage_planner\\build\\ccpp_demo.exe",
+      "--scenario",
+      "obstacles",
+      "--output",
+      "E:\\python-learning\\ccpp_coverage_planner\\.maintenance\\cloud-ci-20261029\\source\\docs\\data\\obstacles"
+    ],
+    "output": "obstacles: PASS; 292 confirmed targets, 37 chunks, 368 path points; synthetic arrivals only",
+    "returncode": 0
+  },
+  {
+    "command": [
+      "E:\\python-learning\\ccpp_coverage_planner\\build\\ccpp_demo.exe",
+      "--scenario",
+      "skip",
+      "--output",
+      "E:\\python-learning\\ccpp_coverage_planner\\.maintenance\\cloud-ci-20261029\\source\\docs\\data\\skip"
+    ],
+    "output": "skip: PASS; 304 confirmed targets, 38 chunks, 357 path points; synthetic arrivals only",
+    "returncode": 0
+  },
+  {
+    "command": [
+      "E:\\python-learning\\ccpp_coverage_planner\\build\\ccpp_demo.exe",
+      "--scenario",
+      "disconnected",
+      "--output",
+      "E:\\python-learning\\ccpp_coverage_planner\\.maintenance\\cloud-ci-20261029\\source\\docs\\data\\disconnected"
+    ],
+    "output": "disconnected: PASS; 144 confirmed targets, 18 chunks, 161 path points; synthetic arrivals only",
+    "returncode": 0
+  },
+  {
+    "command": [
+      "E:\\python-learning\\ccpp_coverage_planner\\build\\ccpp_demo.exe",
+      "--scenario",
+      "stride",
+      "--output",
+      "E:\\python-learning\\ccpp_coverage_planner\\.maintenance\\cloud-ci-20261029\\source\\docs\\data\\stride"
+    ],
+    "output": "stride: PASS; 72 confirmed targets, 9 chunks, 92 path points; synthetic arrivals only",
+    "returncode": 0
+  },
+  {
+    "command": [
+      "E:\\python-learning\\ccpp_coverage_planner\\build\\ccpp_demo.exe",
+      "--scenario",
+      "maze",
+      "--output",
+      "E:\\python-learning\\ccpp_coverage_planner\\.maintenance\\cloud-ci-20261029\\source\\docs\\data\\maze"
+    ],
+    "output": "maze: PASS; 281 confirmed targets, 36 chunks, 355 path points; synthetic arrivals only",
+    "returncode": 0
+  }
+]

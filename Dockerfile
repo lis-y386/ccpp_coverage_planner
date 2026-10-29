@@ -10,6 +10,7 @@ COPY . /ws/src/ccpp_coverage_planner
 RUN if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then rosdep init; fi \
     && rosdep update --include-eol-distros --rosdistro noetic
 RUN source /opt/ros/noetic/setup.bash \
+    && apt-get update \
     && rosdep install --from-paths src --ignore-src --rosdistro noetic -y \
     && catkin_make -DCMAKE_BUILD_TYPE=Release -DCATKIN_ENABLE_TESTING=ON \
     && catkin_make install

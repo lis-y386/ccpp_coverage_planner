@@ -25,6 +25,10 @@ def main():
     for scene in SCENES:
         command = [str(binary), "--scenario", scene, "--output", str(directory / scene)]
         result = subprocess.run(command, check=True, capture_output=True, text=True, timeout=30)
+        # Canonical LF bytes must survive Git checkout unchanged on every platform.
+        for suffix in (".json", ".svg"):
+            artifact = directory / (scene + suffix)
+            artifact.write_bytes(artifact.read_bytes().replace(b"\r\n", b"\n"))
         load(directory / (scene + ".json"))
         records.append({"command": command, "output": result.stdout.strip(), "returncode": 0})
         print(result.stdout.strip())
