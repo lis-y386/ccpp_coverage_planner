@@ -1,5 +1,13 @@
 # Validation record
 
+## Current update — 2026-10-29
+
+Private Linux CI now passes all three jobs, including headless ROS Noetic devel/install-space tests. See [CLOUD_VALIDATION.md](CLOUD_VALIDATION.md). H02/H03 and real hardware/GUI verification remain open; no public release was made.
+
+The assessment below is the dated initial record from 2026-10-26; its remote-CI/ROS Not Verified statements are superseded only within the scope of the cloud report.
+
+## Initial local assessment (historical)
+
 Maintenance began 2026-10-25; final review 2026-10-26 (Asia/Shanghai). This is an unpublished local snapshot. Results are evidence for the named environment only.
 
 ## Executed results

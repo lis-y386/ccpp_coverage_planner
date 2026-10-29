@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-No public release exists yet. This local snapshot has no security-maintenance guarantee. ROS Noetic is EOL; this project does not extend ROS upstream security support.
+v0.1.0-alpha.1 is an experimental source prerelease without a security-maintenance guarantee. ROS Noetic is EOL; this project does not extend ROS upstream security support.
 
 ## Reporting
 
@@ -12,4 +12,4 @@ Include the affected snapshot, environment, minimal reproduction, impact and sug
 
 The planner is not a flight-safety component. Treat maps, YAML/XMLRPC parameters, services and acknowledgment inputs as trusted deployment inputs. Finite/bounded geometry and a FREE in-bounds core start are required. Input-hardening and stale-data limitations are documented in docs/ENGINEERING_AUDIT.md.
 
-No security service, bug bounty, disclosure platform or private-reporting feature is claimed to exist for an unpublished repository.
+No security service, bug bounty, disclosure platform or private-reporting feature is claimed to exist for this project.

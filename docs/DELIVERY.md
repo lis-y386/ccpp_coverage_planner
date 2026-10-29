@@ -1,5 +1,9 @@
 # Delivery and acceptance handoff
 
+## Update — 2026-10-29
+
+A separate private CI repository was created for this cloud-validation request; all three jobs passed. Verified build/generator fixes were synchronized locally. See [CLOUD_VALIDATION.md](CLOUD_VALIDATION.md) and docs/validation/cloud-20261029/result.json. The dated report below describes the original 2026-10-26 handoff; its no-remote-CI claims are historical. No public release or original-repository push occurred.
+
 Date: 2026-10-26 (Asia/Shanghai). Only this independent project was edited. No original flight workspace, existing project or original GitHub remote was modified. No push, public repository, release or Pages deployment occurred.
 
 ## Snapshot / restore

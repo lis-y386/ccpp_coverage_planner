@@ -1,5 +1,7 @@
 # ccpp_coverage_planner
 
+> **Experimental alpha: v0.1.0-alpha.1.** Evaluate with finite, bounded maps and a FREE in-bounds start. Known defects H02/H03 remain open; no real-flight or production-safety claim is made. See [alpha notes](docs/releases/v0.1.0-alpha.1.md) and [CI evidence](docs/CLOUD_VALIDATION.md).
+
 **Coverage planning for robot search tasks: boustrophedon sweeps, A* connections, and explicit arrival confirmation.**
 
 ![Actual C++ route on a synthetic map](assets/banner.svg)
@@ -7,7 +9,7 @@
 [![BSD-3-Clause](assets/badges/license.svg)](LICENSE)
 [![C++14 core](assets/badges/cpp.svg)](docs/INSTALLATION.md)
 [![ROS Noetic: legacy target](assets/badges/ros.svg)](docs/INSTALLATION.md)
-[![Remote CI: not run](assets/badges/ci.svg)](docs/VALIDATION.md)
+[![Build and verify](https://github.com/lis-y386/ccpp_coverage_planner/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/lis-y386/ccpp_coverage_planner/actions/workflows/ci.yml)
 
 [中文](README_zh-CN.md) · [Interactive replay](docs/demo.html) · [Install](docs/INSTALLATION.md) · [ROS API](docs/ROS_API.md) · [Validation](docs/VALIDATION.md) · [Release readiness](docs/RELEASE_READINESS.md)
 
@@ -22,6 +24,8 @@
 **Compute routes yourself**, from this directory:
 
 ```bash
+git clone https://github.com/lis-y386/ccpp_coverage_planner.git
+cd ccpp_coverage_planner
 cmake -S . -B build -DCCPP_STANDALONE=ON -DCMAKE_BUILD_TYPE=Release
 cmake --build build --parallel
 ctest --test-dir build --output-on-failure
@@ -62,7 +66,7 @@ flowchart LR
 
 ## ROS quick start
 
-Target: **Ubuntu 20.04 + ROS Noetic + Python 3.8**. This is a legacy target: [Noetic reached EOL on May 31, 2025](https://discourse.ros.org/t/ros-noetic-end-of-life-may-31-2025/43160). ROS execution is **Not Verified** on the current Windows host.
+Target: **Ubuntu 20.04 + ROS Noetic + Python 3.8**. This is a legacy target: [Noetic reached EOL on May 31, 2025](https://discourse.ros.org/t/ros-noetic-end-of-life-may-31-2025/43160). Headless ROS was verified in private Linux CI; it is not installed on the current Windows host.
 
 Place this directory at ~/ccpp_ws/src/ccpp_coverage_planner, then in a configured Noetic environment:
 
@@ -107,7 +111,7 @@ Paths use target_frame. waypoint_types aligns with path.poses: 0=start/transit, 
 
 Locally executed: **14/14 CTest entries**, including **11 original GTest cases**; **27 Python tests passed** with **2 strict expected failures** exposing preserved input-validation defects. Counts overlap where CTest invokes GTest; do not add them as independent tests.
 
-Browser, installed-library consumer and quality-check evidence is recorded with actual commands in [VALIDATION.md](docs/VALIDATION.md). ROS/catkin, RViz, Docker and remote Actions are separately marked **Not Verified**.
+Browser, installed-library consumer and quality-check evidence is recorded with actual commands in [VALIDATION.md](docs/VALIDATION.md). Headless ROS/catkin and Docker passed private CI; RViz GUI and physical hardware remain **Not Verified**.
 
 ```bash
 python -m pytest -q
@@ -115,7 +119,7 @@ python tools/verify_provenance.py
 python tools/check_project.py
 ```
 
-[Developer checks](docs/INSTALLATION.md#developer-checks). The workflows have not run remotely. Badges state facts rather than an invented build result.
+[Developer checks](docs/INSTALLATION.md#developer-checks). The recorded snapshot passed private CI on 2026-10-29; see the cloud report. Badges state facts rather than an invented build result.
 
 ## Known limitations
 
@@ -131,8 +135,8 @@ python tools/check_project.py
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [conduct](CODE_OF_CONDUCT.md), [security reporting](SECURITY.md) and issue/PR templates. Include a minimal map, request and expected behavior.
 
-Use [CITATION.cff](CITATION.cff) to cite the software snapshot and commit actually used. No paper, DOI, institutional endorsement or published release is claimed.
+Use [CITATION.cff](CITATION.cff) to cite the software snapshot and commit actually used. No paper, DOI or institutional endorsement is claimed. This version is an experimental source prerelease.
 
-BSD-3-Clause for this package follows upstream metadata. Dependency/asset provenance, including xmlrpcpp's LGPL-2.1 declaration, is in [THIRD_PARTY.md](docs/THIRD_PARTY.md). Owner confirmation of upstream rights remains a public-release gate.
+BSD-3-Clause for this package follows upstream metadata. Dependency/asset provenance, including xmlrpcpp's LGPL-2.1 declaration, is in [THIRD_PARTY.md](docs/THIRD_PARTY.md). External dependencies retain their own license terms; see the source provenance and distribution notes.
 
 Extracted from [drone at 8bc54d2](https://github.com/lis-y386/drone/tree/8bc54d2bdb257b3f2f357b1709350e28d25f35cc/src/ccpp_coverage_planner). Core, ROS node, public header, service and original tests are unchanged. [Provenance](docs/PROVENANCE.md).

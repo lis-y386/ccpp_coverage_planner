@@ -81,7 +81,7 @@ def main():
     save_svg("architecture.svg", 1160, 350, body)
 
     badges = {"license": ("license", "BSD-3-Clause", "#39765a"), "cpp": ("core", "C++14", "#397083"),
-              "ros": ("ROS", "Noetic / legacy", "#6a6a52"), "ci": ("remote CI", "not run", "#806840")}
+              "ros": ("ROS", "Noetic / legacy", "#6a6a52"), "ci": ("CI", "see validation", "#806840")}
     (ASSETS / "badges").mkdir(exist_ok=True)
     for name, (label, value, color) in badges.items():
         width = 85 + max(85, len(value) * 7 + 18)

@@ -1,14 +1,16 @@
 # Installation and reproduction
 
+Current private cloud evidence: [CLOUD_VALIDATION.md](CLOUD_VALIDATION.md). Local Windows capabilities and cloud Linux capabilities are distinguished below.
+
 ## Compatibility
 
 | Path | Requirements | Evidence |
 |---|---|---|
 | Offline replay | Modern browser; local file or static host | Actual Chrome checks; no Python/ROS required |
 | Native core | C++14, CMake 3.10+ | Windows MinGW GCC 13.2 tested |
-| Linux native | C++14, CMake, Make/Ninja | CI prepared; not locally run |
-| ROS | Ubuntu 20.04, Noetic, Python 3.8, catkin | Legacy target; Not Verified locally |
-| Docker | Linux containers / Docker Engine | Prepared; Docker absent locally |
+| Linux native | C++14, CMake, Make/Ninja | Private CI passed on 2026-10-29 |
+| ROS | Ubuntu 20.04, Noetic, Python 3.8, catkin | Private headless Noetic CI passed; GUI/hardware unverified |
+| Docker | Linux containers / Docker Engine | Private Docker CI passed; Docker absent locally |
 | MSVC/macOS/ARM | Matching C++14 environment | Not Verified |
 
 [REP-3](https://github.com/ros-infrastructure/rep/blob/master/rep-0003.rst) defines the Noetic Focal/C++14/Python3 target. [Noetic EOL was May 31, 2025](https://discourse.ros.org/t/ros-noetic-end-of-life-may-31-2025/43160). EOL rosdep data, APT keys and image availability may affect reproduction. This project does not supply upstream ROS security maintenance.

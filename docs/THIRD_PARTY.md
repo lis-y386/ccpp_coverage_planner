@@ -25,4 +25,4 @@ Algorithms are described from this project's actual source. No third-party algor
 
 ## Public-release gate
 
-Owner confirmation of upstream rights remains **Blocked**. When distributing compiled ROS binaries or containers, inventory resolved dependencies and their notices/linking obligations separately. Hash matching proves identity to a source snapshot, not authorship or license compliance.
+Experimental source publication is explicitly authorized by the maintainer. This does not constitute an independent historical ownership audit. When distributing compiled ROS binaries or containers, inventory resolved dependencies and their notices/linking obligations separately. Hash matching proves identity to a source snapshot, not authorship or license compliance.

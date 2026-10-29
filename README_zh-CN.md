@@ -1,5 +1,7 @@
 # ccpp_coverage_planner
 
+> **实验性测试版 v0.1.0-alpha.1。** 两个输入校验缺陷 H02/H03 仍开放，调用者需保证地图有限、尺寸合理且起点在界内 FREE 格。此版本不代表生产或实飞可靠性。[版本说明](docs/releases/v0.1.0-alpha.1.md) · [CI 证据](docs/CLOUD_VALIDATION.md)
+
 **机器人搜索任务的覆盖路径规划：牛耕式扫描、A* 衔接、实际到达确认。**
 
 ![实际 C++ 轨迹生成的封面](assets/banner.svg)
@@ -61,7 +63,7 @@ roslaunch ccpp_coverage_planner demo.launch
 
 实际执行：14/14 CTest 条目通过，其中包含 11 个原始 GTest；Python 为 27 通过、2 个严格预期失败。预期失败复现非法起点和无限分辨率校验缺陷，不表示已修复；测试计数不能简单相加。
 
-浏览器回放、安装消费、格式及静态分析结果见[验证记录](docs/VALIDATION.md)。ROS、RViz、Docker 和远端 CI 单列为 Not Verified。
+浏览器回放、安装消费、格式及静态分析结果见[验证记录](docs/VALIDATION.md)。无界面 ROS/catkin 与 Docker 已通过私有云端 CI；RViz 图形界面和实机仍未验证。
 
 核心直接调用者需保证有限、合理尺寸地图和界内 FREE 起点。完成只针对可达覆盖格点，不保证连续地面视野覆盖。没有过期输入保护、在线重置、持久化恢复或飞行中碰撞复查。此上游版只有牛耕式，不含螺旋或跳过区回访。
 
@@ -71,4 +73,4 @@ roslaunch ccpp_coverage_planner demo.launch
 
 [贡献方式](CONTRIBUTING.md) · [软件引用](CITATION.cff) · [第三方清单](docs/THIRD_PARTY.md) · [发布准备](docs/RELEASE_READINESS.md)。
 
-采用上游声明的 BSD-3-Clause，公开前仍需维护者确认代码权属。没有虚构论文、DOI、机构背书或发布记录。源码来自 8bc54d2；核心、ROS 节点、公共头、服务和原始测试保持不变。
+采用上游声明的 BSD-3-Clause，外部依赖保留各自许可，具体来源见第三方清单。不声明关联论文、DOI 或机构背书；此版本为实验性源码预发布。源码来自 8bc54d2；核心、ROS 节点、公共头、服务和原始测试保持不变。

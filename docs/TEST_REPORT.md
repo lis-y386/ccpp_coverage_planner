@@ -40,7 +40,7 @@ Both use strict xfail. An unexpected fix produces XPASS and fails the suite for 
 
 ## ROS result
 
-No ROS node/service test was executed on this Windows host. Positive completion and negative service/confirmation tests are prepared for real Noetic; their status is Not Verified.
+Private Noetic CI passed on 2026-10-29, including positive completion, negative service/confirmation checks, original GTest and installed-space rostest. See CLOUD_VALIDATION.md. No ROS test was executed on this Windows host.
 
 ## Coverage
 

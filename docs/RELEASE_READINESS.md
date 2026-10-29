@@ -1,62 +1,36 @@
 # Release readiness
 
-Assessment: 2026-10-26. **Local engineering/demo preparation is Ready within the validated scope. Public release is Blocked; ROS runtime is Not Verified.** No repository or release was created.
+## v0.1.0-alpha.1: experimental source-only scope
 
-## Ready
+The maintainer has explicitly requested repository publication and an alpha prerelease. This supersedes the earlier instruction to keep the validation repository private and unreleased.
 
-| Item | Evidence |
-|---|---|
-| Recoverable pre-edit baseline | Verified 36-file ZIP and baseline manifest in ignored .maintenance/backups |
-| Original algorithm and API preserved | Five upstream-protected file hashes match 8bc54d2 |
-| Standalone reproducibility | Native build, 14 CTest entries and 11 original GTest cases executed |
-| Honest defect reporting | 27 Python passes + 2 strict known-defect xfails |
-| Library installation | Exported ccpp::grid_planner used by an independently configured consumer |
-| Real demonstration output | Six actual C++ datasets, semantic checks, SHA256, browser assertions and generated GIF/SVG |
-| Documentation/community | English/Chinese homepages, API/algorithm/architecture/install/examples, issue/PR/conduct/security/citation files |
-| Local source quality | Scoped clang-format and actual Cppcheck analysis; preserved source not cosmetically rewritten |
-| No remote side effects | Local-only directory preparation; no push, release, repository or Pages deployment |
+**Ready for an experimental source preview with documented input preconditions. Stable / production / flight-ready status remains Blocked.**
 
-## Blocked
+| Status | Item | Evidence / scope |
+|---|---|---|
+| Ready | Recoverable baseline | Local verified backups are retained outside the public payload |
+| Ready | Protected source identity | Core, ROS node, public header, service and original test hashes match 8bc54d2 |
+| Ready | Native and browser validation | Actual Linux CI and prior local checks; see CLOUD_VALIDATION.md |
+| Ready | Headless ROS Noetic | Actual Docker catkin build, original GTest, service/demo and install-space checks |
+| Ready | Honest experimental scope | H02/H03, observation assumptions and unverified environments are prominent |
+| Ready | Publication authorization | Explicit maintainer request to rename, make public and publish a test version |
+| Blocked | Arbitrary-input robustness | H02/H03 remain open; direct callers must enforce finite/bounded geometry and a FREE in-bounds start |
+| Blocked | Production/flight-ready release | No continuous execution safety or physical validation has been established |
+| Not Verified | RViz GUI / actual sensors / hardware | Headless synthetic tests do not establish these capabilities |
+| Not Verified | Other architectures / sanitizers / fuzzing | No results claimed |
+| Not Verified | Independent legal/historical authorship audit | Publication is the maintainer's source-release decision; hashes are not ownership proof |
 
-| Gate | Reason / required action |
-|---|---|
-| Public-source provenance confirmation | Owner must confirm rights to upstream code and any incorporated material; hashes are not authorship proof |
-| Supported arbitrary direct-core inputs | H02/H03 remain open by instruction. Approve fixes separately or explicitly restrict an experimental release input contract |
-| Claiming a verified ROS package release | Run Noetic build, node/service tests, install-space tests and RViz on the target environment first |
-| Binary/container distribution | Review actual resolved dependencies, including xmlrpcpp LGPL-2.1, and preserve required notices |
-| Official release identity | Owner must approve repository, metadata, version and future publication; none exists yet |
+The release procedure must gate publication on the candidate commit's CI, keep it marked Pre-release, and attach only source/demo artifacts. No compiled ROS binaries or registry image are being distributed.
 
-## Not Verified
+## Publication checks
 
-- Ubuntu 20.04 / ROS Noetic runtime, rosdep/APT/image availability.
-- Devel and installed-space ROS tests, RViz and hardware/simulator behavior.
-- Docker build/runtime, pinned resolved digest and package inventory.
-- Remote CI, static hosting, external fresh-user clone/download instructions.
-- Linux/macOS/MSVC/ARM support, fuzz/sanitizer results and sensor-footprint coverage.
+- Keep the repository named ccpp_coverage_planner.
+- Use v0.1.0-alpha.1 and mark it Pre-release, not a stable Latest release.
+- Preserve all original core/API/test files.
+- Exclude .maintenance, build directories, caches, local backups and machine-specific validation logs.
+- Review tracked history and release attachments for credentials and unintended payloads.
+- Record the exact candidate SHA, successful CI URL, tag and asset checksums in the local publication report.
+- Keep experimental input restrictions and H02/H03 visible in README and Release notes.
+- Do not enable Pages or publish container images as part of this source-release task.
 
-No fictional build-passing badge, Stars count, hosted demo, DOI, paper or institution is used.
-
-## Before-publication checklist
-
-- [ ] Confirm upstream authorship and third-party origin.
-- [ ] Decide how H02/H03 will be fixed or constrained; keep regressions and documentation truthful.
-- [ ] Execute the tested Docker stage and Noetic devel/install-space tests; retain logs.
-- [ ] Inspect RViz output, TF/map semantics and failure cases on target data.
-- [ ] Record actual image digest and distribution notices before redistributing binaries/images.
-- [ ] Review .gitignore/.dockerignore and export only the source manifest; exclude .maintenance, build directories, backups and caches.
-- [ ] Approve repository identity, then run remote CI before changing the CI badge.
-- [ ] Approve Pages deployment separately; docs is static-ready but unpublished.
-- [ ] Review LICENSE, CITATION, changelog and snapshot identifiers.
-- [ ] Only then approve a release/tag; no publishing command is part of this work.
-
-## Suggested GitHub metadata (proposals only)
-
-- Repository: **ccpp_coverage_planner** (matches the ROS package and find_package identity).
-- Description: **Standalone C++14 and ROS1 coverage planning with boustrophedon sweeps, A* connections, explicit arrival confirmation, and reproducible grid demos.**
-- Topics: robotics, ros, ros-noetic, coverage-path-planning, path-planning, boustrophedon, astar, cpp14, occupancy-grid, visualization.
-- First public version: **v0.1.0**, after gates are satisfied. It communicates an early API with known limits and matches package.xml; do not label this snapshot v1.0 or claim production readiness. Until approved, keep CHANGELOG Unreleased and omit invented release dates/DOIs.
-- Demo location after explicit hosting approval: repository docs folder as a static site; no guessed URL is supplied.
-
-## Handoff
-
-See DELIVERY.md for the final directory tree, complete added/modified file list, before/after comparison and remaining target-environment verification. See VALIDATION.md and validation/current for actual commands and results.
+See [release notes](releases/v0.1.0-alpha.1.md), [cloud evidence](CLOUD_VALIDATION.md) and [engineering audit](ENGINEERING_AUDIT.md).

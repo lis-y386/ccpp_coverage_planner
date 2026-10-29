@@ -4,6 +4,10 @@ Audit started 2026-10-25; acceptance reviewed 2026-10-26 (Asia/Shanghai). Baseli
 
 This report distinguishes defects, operational assumptions and missing validation. **No core algorithm, ROS node, public header or service schema is changed in this maintenance pass.** Fixed packaging issues do not resolve algorithm findings.
 
+## 2026-10-29 update
+
+H01 headless build/service/install validation is now resolved by [private cloud CI](CLOUD_VALIDATION.md). H02/H03 remain open; GUI/hardware claims remain unverified. The original findings below preserve the initial assessment.
+
 ## Critical
 
 No confirmed Critical finding in this source-level review. This is not a safety certification, security audit or proof of correctness for arbitrary inputs.
