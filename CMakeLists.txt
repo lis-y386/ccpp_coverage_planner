@@ -121,7 +121,7 @@ if(CATKIN_ENABLE_TESTING)
   add_test(NAME core_boundaries COMMAND test_core_boundaries)
   catkin_add_gtest(test_grid_planner test/test_grid_planner.cpp)
   if(TARGET test_grid_planner)
-    target_link_libraries(test_grid_planner ccpp_grid_planner ${catkin_LIBRARIES})
+    target_link_libraries(test_grid_planner ccpp_grid_planner ${GTEST_MAIN_LIBRARIES} ${catkin_LIBRARIES})
   endif()
 endif()
 
